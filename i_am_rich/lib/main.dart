@@ -6,6 +6,6 @@ void main() {
       home: Center(
         child: Text('Hello World!'),
       ),
-    )
+    ),
   );
 }
