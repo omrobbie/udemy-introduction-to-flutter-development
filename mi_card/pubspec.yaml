@@ -64,7 +64,10 @@ flutter:
     - family: Pacifico
       fonts:
         - asset: fonts/Pacifico-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
+
+    - family: Source Sans Pro
+      fonts:
+        - asset: fonts/SourceSansPro-Regular.ttf
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:
