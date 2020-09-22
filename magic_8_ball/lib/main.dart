@@ -4,7 +4,12 @@ void main() {
   runApp(BallPage());
 }
 
-class BallPage extends StatelessWidget {
+class BallPage extends StatefulWidget {
+  @override
+  _BallPageState createState() => _BallPageState();
+}
+
+class _BallPageState extends State<BallPage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,7 +19,9 @@ class BallPage extends StatelessWidget {
           backgroundColor: Colors.blueAccent,
           title: Text('Ask Me Anything'),
         ),
-        body: Container(),
+        body: Center(
+          child: Image.asset('images/ball1.png'),
+        ),
       ),
     );
   }
