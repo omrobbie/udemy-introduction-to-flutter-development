@@ -16,3 +16,7 @@ Learn about Expanded to avoid overflow UI, Padding, and using Stateful Widget, c
 ### 4. Magic 8 Ball
 Recall all what we have learnt in this Boss Level Challenge 1. Using the stateful to update the ball state whenever it pressed.<br>
 <img src="magic_8_ball/screenshot/preview.png" width=256 />
+
+### 5. Xylophone
+Learn how to play a sound with Audio Cache from Pub Dev.<br>
+<img src="xylophone/screenshot/preview.png" width=256 />
