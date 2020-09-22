@@ -14,6 +14,12 @@ class BallPage extends StatefulWidget {
 class _BallPageState extends State<BallPage> {
   int ballNumber = 1;
 
+  void changeBallFace() {
+    setState(() {
+      ballNumber = Random().nextInt(5) + 1;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -26,11 +32,7 @@ class _BallPageState extends State<BallPage> {
         body: Center(
           child: FlatButton(
             child: Image.asset('images/ball$ballNumber.png'),
-            onPressed: () {
-              setState(() {
-                ballNumber = Random().nextInt(5) + 1;
-              });
-            },
+            onPressed: changeBallFace,
           ),
         ),
       ),
