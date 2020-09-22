@@ -12,3 +12,7 @@ Learn about Column, Row, Main Axis Size and Alignment, CircleAvatar, Font TextSt
 ### 3. Dicee
 Learn about Expanded to avoid overflow UI, Padding, and using Stateful Widget, create function.<br>
 <img src="dicee/screenshot/preview.png" width=256 />
+
+### 4. Magic 8 Ball
+Recall all what we have learnt in this Boss Level Challenge 1. Using the stateful to update the ball state whenever it pressed.<br>
+<img src="magic_8_ball/screenshot/preview.png" width=256 />
