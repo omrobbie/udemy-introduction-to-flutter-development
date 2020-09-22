@@ -11,14 +11,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.brown,
-          title: Text('Mi Card'),
-        ),
         backgroundColor: Colors.teal,
-        body: Container(),
-        floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.add),
+        body: SafeArea(
+            child: Container(
+              height: 100.0,
+              width: 100.0,
+              margin: EdgeInsets.symmetric(vertical: 50.0, horizontal: 10.0),
+              color: Colors.white,
+              child: Text('Hello World!'),
+            ),
         ),
       ),
     );
