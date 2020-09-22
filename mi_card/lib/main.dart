@@ -11,8 +11,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.brown,
+          title: Text('Mi Card'),
+        ),
         backgroundColor: Colors.teal,
         body: Container(),
+        floatingActionButton: FloatingActionButton(
+          child: Icon(Icons.add),
+        ),
       ),
     );
   }
