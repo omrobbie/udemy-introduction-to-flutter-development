@@ -1,6 +1,8 @@
 import 'question.dart';
 
 class QuizBrain {
+  int totalCorrectAnswer = 0;
+
   int _questionNumber = 0;
 
   List<Question> _questionBank = [
@@ -43,5 +45,14 @@ class QuizBrain {
     if (_questionNumber < _questionBank.length - 1) {
       _questionNumber++;
     }
+  }
+
+  bool isLastQuestion() {
+    return _questionNumber == _questionBank.length - 1;
+  }
+
+  void resetQuiz() {
+    _questionNumber = 0;
+    totalCorrectAnswer = 0;
   }
 }

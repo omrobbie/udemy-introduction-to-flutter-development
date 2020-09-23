@@ -1,6 +1,6 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:quizzler/quiz_brain.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
 
 QuizBrain quizBrain = QuizBrain();
 
@@ -45,6 +45,36 @@ class _QuizPageState extends State<QuizPage> {
           color: correctAnswer ? Colors.green : Colors.red,
         ),
       );
+
+      if (correctAnswer) {
+        quizBrain.totalCorrectAnswer++;
+      }
+
+      int totalCorrectAnswer = quizBrain.totalCorrectAnswer;
+
+      if (quizBrain.isLastQuestion()) {
+        Alert(
+          context: context,
+          title: "Your total score",
+          desc: "You have $totalCorrectAnswer correct answers.",
+          buttons: [
+            DialogButton(
+              child: Text(
+                "Reset Quiz",
+                style: TextStyle(color: Colors.white, fontSize: 20),
+              ),
+              onPressed: () {
+                setState(() {
+                  scoreKeeper = [];
+                  quizBrain.resetQuiz();
+                });
+                Navigator.pop(context);
+              },
+              color: Colors.blue,
+            ),
+          ],
+        ).show();
+      }
     });
   }
 
