@@ -20,3 +20,9 @@ Materi selengkapnya ada di https://www.appbrewery.co/courses/enrolled/851555. Se
 ### 5. Xylophone
 <p>Learn how to play a sound with Audio Cache from Pub Dev.</p>
 <img src="xylophone/screenshot/preview.png" width=256 />
+
+### 6. Quizzler
+<p>Learn to create data model, play with events, OOP in Dart, and using rflutter alert library to show the quiz score.</p>
+<img src="quizzler/screenshot/preview1.png" width=256 />&nbsp;
+<img src="quizzler/screenshot/preview2.png" width=256 />&nbsp;
+<img src="quizzler/screenshot/preview3.png" width=256 />&nbsp;
