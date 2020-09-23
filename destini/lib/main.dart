@@ -1,4 +1,7 @@
+import 'package:destini/story_brain.dart';
 import 'package:flutter/material.dart';
+
+StoryBrain storyBrain = StoryBrain();
 
 void main() {
   runApp(Destini());

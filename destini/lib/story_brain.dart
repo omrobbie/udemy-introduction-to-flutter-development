@@ -1,6 +1,6 @@
 import 'package:destini/story.dart';
 
-class storyBrain {
+class StoryBrain {
   List<Story> _storyData = [
     Story(
         title:
