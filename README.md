@@ -26,3 +26,8 @@ Materi selengkapnya ada di https://www.appbrewery.co/courses/enrolled/851555. Se
 <img src="quizzler/screenshot/preview1.png" width=256 />&nbsp;
 <img src="quizzler/screenshot/preview2.png" width=256 />&nbsp;
 <img src="quizzler/screenshot/preview3.png" width=256 />&nbsp;
+
+### 7. Destini
+<p>Recall all  what we have learnt for Boss level Challenge 2. Create data model, pass next story based on user choice.</p>
+<img src="destini/screenshot/preview1.png" width=256 />&nbsp;
+<img src="destini/screenshot/preview2.png" width=256 />&nbsp;
