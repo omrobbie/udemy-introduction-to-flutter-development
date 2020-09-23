@@ -48,6 +48,11 @@ class StoryBrain {
   }
 
   void nextStory(int userChoice) {
-    _storyNumber = userChoice;
+    Map<int, List> storyRule = {
+      1: [2, 2, 5, 0, 0, 0],
+      2: [1, 3, 4, 0, 0, 0]
+    };
+
+    _storyNumber = storyRule[userChoice][_storyNumber];
   }
 }
