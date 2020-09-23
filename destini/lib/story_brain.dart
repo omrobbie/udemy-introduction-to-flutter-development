@@ -55,4 +55,8 @@ class StoryBrain {
 
     _storyNumber = storyRule[userChoice][_storyNumber];
   }
+
+  bool isVisible() {
+    return _storyData[_storyNumber].choice2 != '';
+  }
 }
