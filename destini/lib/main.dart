@@ -55,7 +55,7 @@ class _StoryPageState extends State<StoryPage> {
                 child: FlatButton(
                   color: Colors.red,
                   child: Text(
-                    'Choice 1',
+                    storyBrain.getChoice1(),
                     style: TextStyle(
                       fontSize: 20.0,
                     ),
@@ -73,7 +73,7 @@ class _StoryPageState extends State<StoryPage> {
                 child: FlatButton(
                   color: Colors.blue,
                   child: Text(
-                    'Choice 2',
+                    storyBrain.getChoice2(),
                     style: TextStyle(
                       fontSize: 20.0,
                     ),
