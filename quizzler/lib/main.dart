@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:quizzler/quiz_brain.dart';
 
@@ -31,6 +32,25 @@ class QuizPage extends StatefulWidget {
 
 class _QuizPageState extends State<QuizPage> {
   List<Icon> scoreKeeper = [];
+
+  void checkAnswer(bool userPickedAnswer) {
+    bool answer = quizBrain.getQuestionAnswer();
+    if (answer == userPickedAnswer) {
+      print('You got the right answer!');
+    } else {
+      print('WRONG!');
+    }
+
+    setState(() {
+      quizBrain.nextQuestion();
+      scoreKeeper.add(
+        Icon(
+          userPickedAnswer ? Icons.check : Icons.close,
+          color: userPickedAnswer ? Colors.green : Colors.red,
+        ),
+      );
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -66,22 +86,7 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               onPressed: () {
-                setState(() {
-                  bool answer = quizBrain.getQuestionAnswer();
-                  if (answer == true) {
-                    print('You got the right answer!');
-                  } else {
-                    print('WRONG!');
-                  }
-
-                  quizBrain.nextQuestion();
-                  scoreKeeper.add(
-                    Icon(
-                      Icons.check,
-                      color: Colors.green,
-                    ),
-                  );
-                });
+                checkAnswer(true);
               },
             ),
           ),
@@ -99,22 +104,7 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               onPressed: () {
-                setState(() {
-                  bool answer = quizBrain.getQuestionAnswer();
-                  if (answer == true) {
-                    print('You got the right answer!');
-                  } else {
-                    print('WRONG!');
-                  }
-
-                  quizBrain.nextQuestion();
-                  scoreKeeper.add(
-                    Icon(
-                      Icons.close,
-                      color: Colors.red,
-                    ),
-                  );
-                });
+                checkAnswer(false);
               },
             ),
           ),
