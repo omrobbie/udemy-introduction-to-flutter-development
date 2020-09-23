@@ -32,4 +32,8 @@ class storyBrain {
         choice1: 'Restart',
         choice2: '')
   ];
+
+  String getStory() {
+    return _storyData[0].title;
+  }
 }
