@@ -61,7 +61,7 @@ class _StoryPageState extends State<StoryPage> {
                     ),
                   ),
                   onPressed: () {
-
+                    storyBrain.nextStory(1);
                   },
                 ),
               ),
@@ -79,7 +79,7 @@ class _StoryPageState extends State<StoryPage> {
                     ),
                   ),
                   onPressed: () {
-
+                    storyBrain.nextStory(2);
                   },
                 ),
               ),
