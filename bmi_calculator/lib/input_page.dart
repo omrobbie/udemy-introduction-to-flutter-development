@@ -4,16 +4,9 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'reusable_card.dart';
 import 'icon_content.dart';
+import 'constants.dart';
 
-const bottomContainerHeight = 80.0;
-const activeCardColor = Color(0xFF1D1E33);
-const inactiveCardColor = Color(0xFF111328);
-const bottomContainerColor = Color(0xFFEB1555);
-
-enum GenderType {
-  male,
-  female
-}
+enum GenderType { male, female }
 
 class InputPage extends StatefulWidget {
   @override
@@ -41,7 +34,9 @@ class _InputPageState extends State<InputPage> {
                         gender = GenderType.male;
                       });
                     },
-                    color: gender == GenderType.male ? activeCardColor : inactiveCardColor,
+                    color: gender == GenderType.male
+                        ? activeCardColor
+                        : inactiveCardColor,
                     cardChild: IconContent(
                       icon: FontAwesomeIcons.mars,
                       label: 'MALE',
@@ -55,7 +50,9 @@ class _InputPageState extends State<InputPage> {
                         gender = GenderType.female;
                       });
                     },
-                    color: gender == GenderType.female ? activeCardColor : inactiveCardColor,
+                    color: gender == GenderType.female
+                        ? activeCardColor
+                        : inactiveCardColor,
                     cardChild: IconContent(
                       icon: FontAwesomeIcons.venus,
                       label: 'FEMALE',
