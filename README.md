@@ -31,3 +31,8 @@ Learn to create data model, play with events, OOP in Dart, and using rflutter al
 Recall all  what we have learnt for Boss level Challenge 2. Create data model, pass next story based on user choice.<br><br>
 <img src="destini/screenshot/preview1.png" width=256 />&nbsp;
 <img src="destini/screenshot/preview2.png" width=256 />&nbsp;
+
+### 8. BMI Calculator
+Learn to create custom components and interact with it, and learn how to move the next screen with Navigator and pass data from previous screen.<br><br>
+<img src="bmi_calculator/screenshot/preview1.png" width=256 />&nbsp;
+<img src="bmi_calculator/screenshot/preview2.png" width=256 />&nbsp;
