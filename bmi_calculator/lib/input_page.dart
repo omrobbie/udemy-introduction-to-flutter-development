@@ -15,6 +15,7 @@ class InputPage extends StatefulWidget {
 
 class _InputPageState extends State<InputPage> {
   GenderType gender;
+  int height = 180;
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +79,7 @@ class _InputPageState extends State<InputPage> {
                     crossAxisAlignment: CrossAxisAlignment.baseline,
                     textBaseline: TextBaseline.alphabetic,
                     children: [
-                      Text('180', style: kNumberTextStyle),
+                      Text(height.toString(), style: kNumberTextStyle),
                       Text('cm', style: kLabelTextStyle),
                     ],
                   ),
