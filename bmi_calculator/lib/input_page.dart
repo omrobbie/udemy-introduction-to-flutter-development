@@ -7,6 +7,7 @@ import 'icon_content.dart';
 
 const bottomContainerHeight = 80.0;
 const activeCardColor = Color(0xFF1D1E33);
+const inactiveCardColor = Color(0xFF111328);
 const bottomContainerColor = Color(0xFFEB1555);
 
 class InputPage extends StatefulWidget {
@@ -15,6 +16,19 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
+  Color maleCardColor = inactiveCardColor;
+  Color femaleCardColor = activeCardColor;
+
+  void updateColor() {
+    if (maleCardColor == activeCardColor) {
+      maleCardColor = inactiveCardColor;
+      femaleCardColor = activeCardColor;
+    } else {
+      maleCardColor = activeCardColor;
+      femaleCardColor = inactiveCardColor;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,10 +43,12 @@ class _InputPageState extends State<InputPage> {
                 Expanded(
                   child: GestureDetector(
                     onTap: () {
-                      print('Male card was tapped!');
+                      setState(() {
+                        updateColor();
+                      });
                     },
                     child: ReusableCard(
-                      color: activeCardColor,
+                      color: maleCardColor,
                       cardChild: IconContent(
                         icon: FontAwesomeIcons.mars,
                         label: 'MALE',
@@ -43,10 +59,12 @@ class _InputPageState extends State<InputPage> {
                 Expanded(
                   child: GestureDetector(
                     onTap: () {
-                      print('Female card was tapped!');
+                      setState(() {
+                        updateColor();
+                      });
                     },
                     child: ReusableCard(
-                      color: activeCardColor,
+                      color: femaleCardColor,
                       cardChild: IconContent(
                         icon: FontAwesomeIcons.venus,
                         label: 'FEMALE',
