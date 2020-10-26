@@ -132,12 +132,20 @@ class _InputPageState extends State<InputPage> {
                           children: [
                             RoundIconButton(
                               icon: Icons.add,
-                              onPressed: () {},
+                              onPressed: () {
+                                setState(() {
+                                  weight++;
+                                });
+                              },
                             ),
                             SizedBox(width: 10.0),
                             RoundIconButton(
                               icon: Icons.remove,
-                              onPressed: () {},
+                              onPressed: () {
+                                setState(() {
+                                  weight--;
+                                });
+                              },
                             ),
                           ],
                         ),
@@ -162,8 +170,8 @@ class _InputPageState extends State<InputPage> {
 }
 
 class RoundIconButton extends StatelessWidget {
-  IconData icon;
-  Function onPressed;
+  final IconData icon;
+  final Function onPressed;
 
   RoundIconButton({this.icon, this.onPressed});
 
