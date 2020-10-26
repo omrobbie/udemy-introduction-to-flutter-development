@@ -198,27 +198,38 @@ class _InputPageState extends State<InputPage> {
               ],
             ),
           ),
-          GestureDetector(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => ResultsPage()),
-              );
-            },
-            child: Container(
-              color: kBottomContainerColor,
-              margin: EdgeInsets.only(top: 10.0),
-              width: double.infinity,
-              height: kBottomContainerHeight,
-              child: Center(
-                child: Text(
-                  'CALCULATE',
-                  style: kLargeTextStyle,
-                ),
-              ),
-            ),
-          ),
+          BottomButton(),
         ],
+      ),
+    );
+  }
+}
+
+class BottomButton extends StatelessWidget {
+  const BottomButton({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => ResultsPage()),
+        );
+      },
+      child: Container(
+        color: kBottomContainerColor,
+        margin: EdgeInsets.only(top: 10.0),
+        width: double.infinity,
+        height: kBottomContainerHeight,
+        child: Center(
+          child: Text(
+            'CALCULATE',
+            style: kLargeTextStyle,
+          ),
+        ),
       ),
     );
   }
